@@ -1,0 +1,70 @@
+{
+  "name": "sc-electron-vite",
+  "displayName": "SC - Electron Vite",
+  "description": "Electron with Vite boilerplate",
+  "private": false,
+  "version": "1.0.10",
+  "author": {
+    "name": "Saulo Costa",
+    "email": "saulotarsobc+electronvite@gmail.com"
+  },
+  "type": "module",
+  "main": "dist/backend/main.js",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "tsc && vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "update-readme": "tsx scripts/update-readme.js",
+    "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
+    "dist": "npm run generate-electron-builder && npm run build && electron-builder"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.3.5",
+    "@mantine/hooks": "^8.3.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "electron": "^38.3.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.37.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.10",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
+  },
+  "keywords": [
+    "electron",
+    "vite",
+    "react",
+    "electron-builder"
+  ],
+  "browserslist": [
+    "Electron >= 37"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saulotarsobc/electron-with-vite"
+  }
+}
