@@ -23,7 +23,7 @@ const badgeColors = {
   TypeScript: "blue",
   NextJS: "black",
   ReactJS: "61DAFB",
-};
+} as Record<string, string>;
 
 const badges = Object.entries(dependencies).map(([name, version]) => {
   if (typeof version === "string") {
