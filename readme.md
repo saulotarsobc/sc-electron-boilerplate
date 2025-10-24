@@ -5,18 +5,18 @@
 ---
 
 <div align="center">
-  <img alt="Stars" src="https://img.shields.io/github/stars/saulotarsobc/electron-with-vite.svg">
-  <img alt="Forks" src="https://img.shields.io/github/forks/saulotarsobc/electron-with-vite.svg">
+  <img alt="Stars" src="https://img.shields.io/github/stars/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Forks" src="https://img.shields.io/github/forks/saulotarsobc/sc-electron-boilerplate.svg">
 </div>
 
 <div align="center">
   <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
-  <img alt="Version" src="https://img.shields.io/github/v/release/saulotarsobc/electron-with-vite.svg">
-  <img alt="Contributors" src="https://img.shields.io/github/contributors/saulotarsobc/electron-with-vite.svg">
-  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/saulotarsobc/electron-with-vite.svg">
-  <img alt="Issues" src="https://img.shields.io/github/issues/saulotarsobc/electron-with-vite.svg">
-  <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/saulotarsobc/electron-with-vite.svg">
-  <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/saulotarsobc/electron-with-vite/.github/workflows/launch-app.yaml">
+  <img alt="Version" src="https://img.shields.io/github/v/release/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Contributors" src="https://img.shields.io/github/contributors/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Issues" src="https://img.shields.io/github/issues/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/saulotarsobc/sc-electron-boilerplate.svg">
+  <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/saulotarsobc/sc-electron-boilerplate/.github/workflows/launch-app.yaml">
 </div>
 
 ---
@@ -46,9 +46,9 @@
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/saulotarsobc/electron-with-vite
+$ git clone https://github.com/saulotarsobc/sc-electron-boilerplate
 # Go into the repository
-$ cd electron-with-vite
+$ cd sc-electron-boilerplate
 # Install dependencies
 $ npm install
 # Run the app
