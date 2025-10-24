@@ -34,6 +34,10 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     title: `${displayName} - v${app.getVersion()}`,
     icon: path.join(process.env.VITE_PUBLIC, "icon.ico"),
+    width: 1200,
+    height: 800,
+    minHeight: 600,
+    minWidth: 800,
     webPreferences: {
       preload: path.join(__dirname, "preload.mjs"),
       contextIsolation: true,
