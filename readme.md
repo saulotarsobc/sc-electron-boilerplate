@@ -1,6 +1,6 @@
-# Electron APP and Vite
+# Electron boilerplate
 
-> Electron APP and Vite
+> Electron + Vite + React
 
 ---
 
