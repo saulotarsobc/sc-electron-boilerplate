@@ -18,15 +18,15 @@
     "postinstall": "electron-builder install-app-deps",
     "update-readme": "tsx scripts/update-readme.js",
     "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
-    "dist": "npm run generate-electron-builder && npm run build && electron-builder"
+    "dist": "bun run generate-electron-builder && bun run build && electron-builder"
   },
   "dependencies": {
     "@mantine/core": "^8.3.15",
     "@mantine/hooks": "^8.3.15",
-    "@tabler/icons-react": "^3.36.1",
+    "@tabler/icons-react": "^3.38.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
@@ -34,7 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^8.56.0",
     "@typescript-eslint/parser": "^8.56.0",
     "@vitejs/plugin-react": "^5.1.4",
-    "electron": "^40.6.0",
+    "electron": "^40.6.1",
     "electron-builder": "^26.8.1",
     "eslint": "^9.39.2",
     "eslint-plugin-react-hooks": "^7.0.1",
