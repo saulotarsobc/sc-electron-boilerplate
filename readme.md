@@ -24,7 +24,7 @@
 <!-- Badge Start -->
 <div align="center">
  <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.13.0-44883e">
- <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v40.6.1-46816e">
+ <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v41.0.2-46816e">
  <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.8.1-blue">
  <img alt="static badge from typescript" src="https://img.shields.io/badge/TypeScript-v5.9.3-blue">
  <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.4-61DAFB">
@@ -59,15 +59,20 @@ $ bun run dev
 
 ## Available Scripts
 
-- **dev**: Builds the Electron app and starts the development environment using the dev script.
-- **vite:dev**: Starts the Vite development server.
-- **vite:build**: Compiles TypeScript and builds the Vite application for production.
-- **preview**: Previews the built Vite application.
-- **electron:build**: Compiles TypeScript files in the electron directory.
-- **build:all**: Runs both electron:build and vite:build to prepare the entire application.
-- **postinstall**: Installs application dependencies using electron-builder.
-- **update:readme**: Updates the readme file using a script.
-- **dist**: Builds the application and packages it for distribution using electron-builder.
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "postinstall": "electron-builder install-app-deps",
+    "update-readme": "tsx scripts/update-readme.js",
+    "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
+    "dist": "bun run generate-electron-builder && bun run build && electron-builder"
+  }
+}
+```
 
 ---
 
