@@ -50,9 +50,9 @@ $ git clone https://github.com/saulotarsobc/sc-electron-boilerplate
 # Go into the repository
 $ cd sc-electron-boilerplate
 # Install dependencies
-$ bun install
+$ pnpm install
 # Run the app
-$ bun run dev
+$ pnpm run dev
 ```
 
 ---
@@ -69,12 +69,10 @@ $ bun run dev
     "postinstall": "electron-builder install-app-deps",
     "update-readme": "tsx scripts/update-readme.js",
     "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
-    "dist": "bun run generate-electron-builder && bun run build && electron-builder"
+    "dist": "pnpm run generate-electron-builder && pnpm run build && electron-builder"
   }
 }
 ```
-
----
 
 ## References
 
