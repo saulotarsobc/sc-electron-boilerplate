@@ -59,5 +59,6 @@
     {
       "file": "/.github/commit.md"
     }
-  ]
+  ],
+  "js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }
