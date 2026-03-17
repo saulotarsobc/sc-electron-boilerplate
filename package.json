@@ -3,7 +3,7 @@
   "displayName": "SC - Electron Boilerplate",
   "description": "Electron + Vite + React",
   "private": false,
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": {
     "name": "Saulo Costa",
     "email": "saulotarsobc+electronvite@gmail.com"
