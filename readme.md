@@ -23,11 +23,11 @@
 
 <!-- Badge Start -->
 <div align="center">
- <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.13.0-44883e">
- <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v41.0.2-46816e">
+ <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.15.0-44883e">
+ <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v41.3.0-46816e">
  <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.8.1-blue">
  <img alt="static badge from typescript" src="https://img.shields.io/badge/TypeScript-v5.9.3-blue">
- <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.4-61DAFB">
+ <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.5-61DAFB">
 </div>
 <!-- Badge End -->
 
