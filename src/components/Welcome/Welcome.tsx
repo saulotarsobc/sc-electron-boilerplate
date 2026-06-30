@@ -25,7 +25,7 @@ export function Welcome() {
       </Text>
 
       <Card>
-        <Code mt={'lg'} ta="center" style={{ fontFamily: 'monospace' }}>
+        <Code mt={"lg"} ta="center" style={{ fontFamily: "monospace" }}>
           This is a monospace font. Just a example.
         </Code>
       </Card>

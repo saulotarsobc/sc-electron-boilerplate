@@ -23,11 +23,11 @@
 
 <!-- Badge Start -->
 <div align="center">
- <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.15.0-44883e">
- <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v41.3.0-46816e">
- <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.8.1-blue">
+ <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.18.0-44883e">
+ <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v42.5.1-46816e">
+ <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.15.3-blue">
  <img alt="static badge from typescript" src="https://img.shields.io/badge/TypeScript-v5.9.3-blue">
- <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.5-61DAFB">
+ <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.7-61DAFB">
 </div>
 <!-- Badge End -->
 
@@ -50,9 +50,9 @@ $ git clone https://github.com/saulotarsobc/sc-electron-boilerplate
 # Go into the repository
 $ cd sc-electron-boilerplate
 # Install dependencies
-$ pnpm install
+$ npm install
 # Run the app
-$ pnpm run dev
+$ npm run dev
 ```
 
 ---
@@ -69,7 +69,7 @@ $ pnpm run dev
     "postinstall": "electron-builder install-app-deps",
     "update-readme": "tsx scripts/update-readme.js",
     "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
-    "dist": "pnpm run generate-electron-builder && pnpm run build && electron-builder"
+    "dist": "npm run generate-electron-builder && npm run build && electron-builder"
   }
 }
 ```
