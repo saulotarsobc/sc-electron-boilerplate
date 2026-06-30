@@ -14,28 +14,54 @@ const dependencies = {
   "Electron Builder": packageJson.devDependencies["electron-builder"],
   TypeScript: packageJson.devDependencies.typescript,
   ReactJS: packageJson.dependencies.react,
+  Vite: packageJson.devDependencies.vite,
 };
 
 const badgeColors = {
-  ElectronJS: "46816e",
-  "Electron Builder": "blue",
+  ElectronJS: "E73D2F",
+  ElectronBuilder: "blue",
   NodeJS: "44883e",
   TypeScript: "blue",
   NextJS: "black",
   ReactJS: "61DAFB",
+  Vite: "9135FF",
 } as Record<string, string>;
 
-const badges = Object.entries(dependencies).map(([name, version]) => {
-  if (typeof version === "string") {
-    return ` <img alt="static badge from ${name.toLocaleLowerCase()}" src="https://img.shields.io/badge/${name.replace(
-      / /g,
-      "%20"
-    )}-v${version.replace("^", "")}-${badgeColors[name]}">`;
+// Simple Icons slugs (https://simpleicons.org) used as the `logo` query param
+// for shields.io badges (https://shields.io/badges).
+const badgeLogos = {
+  ElectronJS: "electron",
+  "Electron Builder": "electronbuilder",
+  NodeJS: "nodedotjs",
+  TypeScript: "typescript",
+  NextJS: "nextdotjs",
+  ReactJS: "react",
+  Vite: "vite",
+} as Record<string, string>;
+
+const buildBadgeUrl = (name: string, version: string) => {
+  const label = name.replace(/ /g, "%20");
+  const message = `v${version}`.replace("^", "");
+  const params = new URLSearchParams();
+
+  if (badgeLogos[name]) {
+    params.set("logo", badgeLogos[name]);
+    // Logo uses the same color defined for the badge.
+    params.set("logoColor", badgeColors[name]);
   }
-  return ` <img alt="static badge from ${name.toLocaleLowerCase()}" src="https://img.shields.io/badge/${name.replace(
-    / /g,
-    "%20"
-  )}-vN/A-${badgeColors[name]}">`;
+
+  const query = params.toString();
+  return `https://img.shields.io/badge/${label}-${message}-${badgeColors[name]}${
+    query ? `?${query}` : ""
+  }`;
+};
+
+const badges = Object.entries(dependencies).map(([name, version]) => {
+  const url = buildBadgeUrl(
+    name,
+    typeof version === "string" ? version : "N/A",
+  );
+  return ` <img alt="static badge from ${name.toLocaleLowerCase()}" src="${url}">`;
 });
 
 const badgesString = `<div align="center">\n${badges.join("\n")}\n</div>`;
@@ -50,7 +76,7 @@ const badgeEnd = "<!-- Badge End -->";
 
 const updatedReadmeContent = readmeContent.replace(
   new RegExp(`${badgeStart}[\\s\\S]*?${badgeEnd}`),
-  `${badgeStart}\n${badgesString}\n${badgeEnd}`
+  `${badgeStart}\n${badgesString}\n${badgeEnd}`,
 );
 
 writeFileSync(readmePath, updatedReadmeContent, "utf-8");
