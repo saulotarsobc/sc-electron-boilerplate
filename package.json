@@ -18,7 +18,7 @@
     "postinstall": "electron-builder install-app-deps",
     "update-readme": "tsx scripts/update-readme.js",
     "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
-    "dist": "pnpm generate-electron-builder && pnpm build && electron-builder"
+    "dist": "npm generate-electron-builder && npm build && electron-builder"
   },
   "dependencies": {
     "@mantine/core": "^9.4.1",
