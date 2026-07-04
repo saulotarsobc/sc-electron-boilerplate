@@ -4,6 +4,7 @@
   "description": "Electron + Vite + React",
   "private": false,
   "version": "1.0.15",
+  "license": "MIT",
   "author": {
     "name": "Saulo Costa",
     "email": "saulotarsobc+electronvite@gmail.com"
