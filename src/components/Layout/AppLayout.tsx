@@ -42,6 +42,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   const [opened, { toggle }] = useDisclosure();
   const navigate = useNavigate();
   const location = useLocation();
+  const curretYear = new Date().getFullYear();
 
   return (
     <AppShell
@@ -59,7 +60,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               hiddenFrom="sm"
               size="sm"
             />
-            <Title order={3}>Electron + Vite</Title>
+            <Title order={3}>Electron + React + Vite + Mantine</Title>
           </Group>
 
           <Group>
@@ -127,10 +128,10 @@ export function AppLayout({ children }: AppLayoutProps) {
           <Divider mb="md" />
           <Box p="xs" style={{ textAlign: "center" }}>
             <Text size="xs" c="dimmed">
-              Electron + React + Vite
+              My Boilerplate
             </Text>
             <Text size="xs" c="dimmed">
-              © 2025 Saulo Costa
+              © {curretYear} Saulo Costa
             </Text>
           </Box>
         </AppShell.Section>
