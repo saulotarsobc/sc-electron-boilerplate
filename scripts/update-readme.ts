@@ -9,6 +9,7 @@ const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf-8"));
 const nodeVersion = process.version.split("v")[1];
 
 const dependencies = {
+  Mantine: packageJson.dependencies["@mantine/core"],
   NodeJS: nodeVersion,
   ElectronJS: packageJson.devDependencies.electron,
   "Electron Builder": packageJson.devDependencies["electron-builder"],
@@ -18,6 +19,7 @@ const dependencies = {
 };
 
 const badgeColors = {
+  Mantine: "339AF0",
   ElectronJS: "E73D2F",
   ElectronBuilder: "blue",
   NodeJS: "44883e",
@@ -30,6 +32,7 @@ const badgeColors = {
 // Simple Icons slugs (https://simpleicons.org) used as the `logo` query param
 // for shields.io badges (https://shields.io/badges).
 const badgeLogos = {
+  Mantine: "mantine",
   ElectronJS: "electron",
   "Electron Builder": "electronbuilder",
   NodeJS: "nodedotjs",
