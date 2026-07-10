@@ -183,7 +183,7 @@ const theme: MantineThemeOverride = {
     to: "cyan",
     deg: 213,
   },
-  fontFamily: "Popins, sans-serif",
+  fontFamily: "Poppins, sans-serif",
   fontFamilyMonospace: "JetBrains Mono, Courier, monospace",
   headings: { fontFamily: "Outfit, sans-serif" },
   scale: 1,

@@ -8,6 +8,7 @@ import {
   Title,
 } from "@mantine/core";
 import { IconDownload, IconHeart, IconPhoto } from "@tabler/icons-react";
+import { CSSProperties } from "react";
 
 const mockImages = [
   { id: 1, title: "Nature Landscape", size: "2.4 MB", downloads: 1234 },
@@ -31,8 +32,16 @@ export function GalleryPage() {
       </Text>
 
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
-        {mockImages.map((image) => (
-          <Card key={image.id} shadow="sm" padding="lg" radius="md" withBorder>
+        {mockImages.map((image, index) => (
+          <Card
+            key={image.id}
+            className="hover-lift fade-in-up"
+            style={{ "--stagger": index } as CSSProperties}
+            shadow="sm"
+            padding="lg"
+            radius="md"
+            withBorder
+          >
             <Card.Section
               style={{
                 height: 200,

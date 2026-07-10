@@ -36,6 +36,20 @@
 
 ---
 
+## What's inside
+
+Demo pages that show what the stack can do out of the box:
+
+- **Home** — animated hero with gradient headline, floating tech icons and stack cards (versions pulled from `package.json`);
+- **Dashboard** — count-up stats, animated `RingProgress`, pure-CSS bar chart and activity timeline. Hit "Randomize data" and watch everything glide;
+- **Showcase** — interactive playground for Mantine transitions, skeleton loading, loaders, hover effects and an animated modal;
+- **System** — real Electron IPC: runtime versions, live memory/CPU polling every second and an IPC round-trip latency meter;
+- **Gallery / Messages / Search / Profile / Settings** — everyday UI patterns with staggered entrance animations.
+
+Under the hood: typed IPC bridge (`contextBridge` + shared types between main and renderer), shared CSS animation utilities (`src/styles/animations.css`), a `useCountUp` hook, and `prefers-reduced-motion` support everywhere.
+
+---
+
 ## Help
 
 - [Mantine](https://mantine.dev/)

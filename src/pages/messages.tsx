@@ -15,6 +15,7 @@ import {
   IconSend,
   IconVideo,
 } from "@tabler/icons-react";
+import { CSSProperties } from "react";
 
 const mockMessages = [
   {
@@ -68,9 +69,11 @@ export function MessagesPage() {
       </Text>
 
       <Stack gap="md">
-        {mockMessages.map((message) => (
+        {mockMessages.map((message, index) => (
           <Card
             key={message.id}
+            className="hover-lift fade-in-up"
+            style={{ "--stagger": index } as CSSProperties}
             shadow="sm"
             padding="lg"
             radius="md"
