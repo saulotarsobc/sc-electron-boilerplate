@@ -56,7 +56,7 @@ export function SearchPage() {
     (result) =>
       searchQuery === "" ||
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.description.toLowerCase().includes(searchQuery.toLowerCase())
+      result.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (

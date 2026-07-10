@@ -15,11 +15,14 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconBrandGithub,
+  IconDeviceDesktopAnalytics,
   IconHome,
+  IconLayoutDashboard,
   IconMessageCircle,
   IconPhoto,
   IconSearch,
   IconSettings,
+  IconSparkles,
   IconUser,
 } from "@tabler/icons-react";
 import { ReactNode } from "react";
@@ -29,13 +32,26 @@ interface AppLayoutProps {
   children: ReactNode;
 }
 
-const navigationLinks = [
-  { icon: IconHome, label: "Home", path: "/" },
-  { icon: IconPhoto, label: "Gallery", path: "/gallery" },
-  { icon: IconMessageCircle, label: "Messages", path: "/messages" },
-  { icon: IconSearch, label: "Search", path: "/search" },
-  { icon: IconUser, label: "Profile", path: "/profile" },
-  { icon: IconSettings, label: "Settings", path: "/settings" },
+const navigationSections = [
+  {
+    title: "Overview",
+    links: [
+      { icon: IconHome, label: "Home", path: "/" },
+      { icon: IconLayoutDashboard, label: "Dashboard", path: "/dashboard" },
+      { icon: IconSparkles, label: "Showcase", path: "/showcase" },
+      { icon: IconDeviceDesktopAnalytics, label: "System", path: "/system" },
+    ],
+  },
+  {
+    title: "App examples",
+    links: [
+      { icon: IconPhoto, label: "Gallery", path: "/gallery" },
+      { icon: IconMessageCircle, label: "Messages", path: "/messages" },
+      { icon: IconSearch, label: "Search", path: "/search" },
+      { icon: IconUser, label: "Profile", path: "/profile" },
+      { icon: IconSettings, label: "Settings", path: "/settings" },
+    ],
+  },
 ];
 
 export function AppLayout({ children }: AppLayoutProps) {
@@ -80,48 +96,34 @@ export function AppLayout({ children }: AppLayoutProps) {
 
       {/* Navbar */}
       <AppShell.Navbar p="md">
-        <AppShell.Section>
-          <Text size="xs" fw={500} c="dimmed" tt="uppercase" mb="md">
-            Navigation
-          </Text>
-        </AppShell.Section>
-
         <AppShell.Section grow component={ScrollArea}>
-          <Stack gap="xs">
-            {navigationLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                href="#"
-                label={link.label}
-                leftSection={<link.icon size={20} stroke={1.5} />}
-                active={location.pathname === link.path}
-                onClick={(event) => {
-                  event.preventDefault();
-                  navigate(link.path);
-                  if (opened) toggle(); // Close mobile menu after navigation
-                }}
-                variant="filled"
-              />
-            ))}
-          </Stack>
-
-          <Divider my="md" />
-
-          <Text size="xs" c="dimmed" mb="xs">
-            Demo Links (Scroll Test)
-          </Text>
-          {Array(20)
-            .fill(0)
-            .map((_, index) => (
-              <NavLink
-                href="#"
-                key={index}
-                onClick={(event) => event.preventDefault()}
-                label={`Demo link ${index + 1}`}
-                disabled
-                mb={4}
-              />
-            ))}
+          {navigationSections.map((section, sectionIndex) => (
+            <Box key={section.title} mb="md">
+              <Text size="xs" fw={500} c="dimmed" tt="uppercase" mb="xs">
+                {section.title}
+              </Text>
+              <Stack gap="xs">
+                {section.links.map((link) => (
+                  <NavLink
+                    key={link.path}
+                    href="#"
+                    label={link.label}
+                    leftSection={<link.icon size={20} stroke={1.5} />}
+                    active={location.pathname === link.path}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      navigate(link.path);
+                      if (opened) toggle(); // Close mobile menu after navigation
+                    }}
+                    variant="filled"
+                  />
+                ))}
+              </Stack>
+              {sectionIndex < navigationSections.length - 1 && (
+                <Divider mt="md" />
+              )}
+            </Box>
+          ))}
         </AppShell.Section>
 
         <AppShell.Section>

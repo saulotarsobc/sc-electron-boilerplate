@@ -2,6 +2,7 @@ import { app, BrowserWindow } from "electron";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { displayName } from "../package.json";
+import { registerIpcHandlers } from "./utils/ipc";
 import { createAppMenu } from "./utils/menu";
 
 // === Path Configuration ===
@@ -9,12 +10,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 process.env.APP_ROOT = path.join(__dirname, "..");
 
 export const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
+
 export const MAIN_DIST = path.join(
   process.env.APP_ROOT,
   "..",
   "dist",
   "backend",
 );
+
 export const RENDERER_DIST = path.join(
   process.env.APP_ROOT,
   "..",
@@ -53,6 +56,7 @@ function createWindow() {
 }
 
 app.on("ready", () => {
+  registerIpcHandlers();
   createWindow();
   createAppMenu();
 });
