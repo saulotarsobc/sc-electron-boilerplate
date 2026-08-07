@@ -1,4 +1,6 @@
 import { ColorSchemeToggle } from "@/components/ColorSchemeToggle/ColorSchemeToggle";
+import { UpdateBanner } from "@/components/UpdateBanner/UpdateBanner";
+import { useUpdateStatus } from "@/hooks/useUpdateStatus";
 import {
   ActionIcon,
   AppShell,
@@ -59,11 +61,15 @@ export function AppLayout({ children }: AppLayoutProps) {
   const navigate = useNavigate();
   const location = useLocation();
   const curretYear = new Date().getFullYear();
+  const updateStatus = useUpdateStatus();
 
   return (
     <AppShell
       header={{ height: 60 }}
       navbar={{ width: 300, breakpoint: "sm", collapsed: { mobile: !opened } }}
+      // The footer only exists while an update is in progress; `collapsed` is
+      // what gives the height back to the content the rest of the time.
+      footer={{ height: 48, collapsed: !updateStatus }}
       padding="md"
     >
       {/* Header */}
@@ -141,6 +147,13 @@ export function AppLayout({ children }: AppLayoutProps) {
 
       {/* Main Content */}
       <AppShell.Main>{children}</AppShell.Main>
+
+      {/* Auto-update */}
+      {updateStatus && (
+        <AppShell.Footer>
+          <UpdateBanner status={updateStatus} />
+        </AppShell.Footer>
+      )}
     </AppShell>
   );
 }

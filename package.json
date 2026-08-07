@@ -19,12 +19,18 @@
     "postinstall": "electron-builder install-app-deps",
     "update-readme": "tsx scripts/update-readme.js",
     "generate-electron-builder": "tsx scripts/generate-electron-builder.ts",
-    "dist": "npm run generate-electron-builder && npm run build && electron-builder"
+    "dist:prepare": "npm run generate-electron-builder && npm run build",
+    "dist": "npm run dist:prepare && electron-builder",
+    "release": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1",
+    "release:dry": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1 -DryRun",
+    "release:notes": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/changelog.ps1",
+    "release:publish": "npm run dist:prepare && electron-builder --publish always"
   },
   "dependencies": {
     "@mantine/core": "^9.4.1",
     "@mantine/hooks": "^9.4.1",
     "@tabler/icons-react": "^3.44.0",
+    "electron-updater": "^6.8.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1"
@@ -71,6 +77,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/saulotarsobc/electron-with-vite"
+    "url": "https://github.com/saulotarsobc/sc-electron-boilerplate.git"
   }
 }
