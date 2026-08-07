@@ -20,12 +20,12 @@
 
 <!-- Badge Start -->
 <div align="center">
- <img alt="static badge from mantine" src="https://img.shields.io/badge/Mantine-v9.4.1-339AF0?logo=mantine&logoColor=339AF0">
+ <img alt="static badge from mantine" src="https://img.shields.io/badge/Mantine-v9.5.1-339AF0?logo=mantine&logoColor=339AF0">
  <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.18.0-44883e?logo=nodedotjs&logoColor=44883e">
- <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v42.5.1-E73D2F?logo=electron&logoColor=E73D2F">
+ <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v43.3.0-E73D2F?logo=electron&logoColor=E73D2F">
  <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.15.3-undefined?logo=electronbuilder&logoColor=undefined">
  <img alt="static badge from typescript" src="https://img.shields.io/badge/TypeScript-v5.9.3-blue?logo=typescript&logoColor=blue">
- <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.7-61DAFB?logo=react&logoColor=61DAFB">
+ <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.8-61DAFB?logo=react&logoColor=61DAFB">
  <img alt="static badge from vite" src="https://img.shields.io/badge/Vite-v7.3.6-9135FF?logo=vite&logoColor=9135FF">
 </div>
 <!-- Badge End -->
@@ -53,7 +53,6 @@ Under the hood: typed IPC bridge (`contextBridge` + shared types between main an
 ## Help
 
 - [Mantine](https://mantine.dev/)
-- [Mantine Theme Editor - remoraid](https://remoraid.dev/)
 
 ## Getting Started
 
