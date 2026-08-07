@@ -3,3 +3,4 @@
 /dist
 /.env
 electron-builder.json
+/electron-builder.env

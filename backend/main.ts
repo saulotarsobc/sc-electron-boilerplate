@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { displayName } from "../package.json";
 import { registerIpcHandlers } from "./utils/ipc";
 import { createAppMenu } from "./utils/menu";
+import { registerUpdateHandlers, setupAutoUpdater } from "./utils/updater";
 
 // === Path Configuration ===
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -57,8 +58,12 @@ function createWindow() {
 
 app.on("ready", () => {
   registerIpcHandlers();
+  registerUpdateHandlers();
   createWindow();
   createAppMenu();
+  // After the window: update events are sent to open windows, and the check
+  // starts as soon as the first one exists.
+  setupAutoUpdater();
 });
 
 app.on("window-all-closed", () => {
