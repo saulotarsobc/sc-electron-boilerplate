@@ -24,7 +24,9 @@
     "release": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1",
     "release:dry": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1 -DryRun",
     "release:notes": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/changelog.ps1",
-    "release:publish": "npm run dist:prepare && electron-builder --publish always"
+    "release:publish": "npm run dist:prepare && electron-builder --publish always",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"backend/**/*.{ts,tsx}\" \"scripts/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@mantine/core": "^9.5.1",
@@ -51,6 +53,7 @@
     "postcss": "^8.5.26",
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
+    "prettier": "^3.9.6",
     "tsx": "^4.23.11",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.66.0",

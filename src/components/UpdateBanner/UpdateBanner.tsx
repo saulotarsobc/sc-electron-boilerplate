@@ -17,7 +17,9 @@ export function UpdateBanner({ status }: UpdateBannerProps) {
       {status.state === "available" && (
         <>
           <IconDownload size={18} stroke={1.5} />
-          <Text size="sm">New version {status.version} found, downloading…</Text>
+          <Text size="sm">
+            New version {status.version} found, downloading…
+          </Text>
         </>
       )}
 

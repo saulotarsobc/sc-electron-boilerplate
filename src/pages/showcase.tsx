@@ -154,7 +154,13 @@ function SkeletonDemo() {
       </Group>
 
       <Group mb="md">
-        <Skeleton visible={loading} circle w={48} h={48} style={{ flexShrink: 0 }}>
+        <Skeleton
+          visible={loading}
+          circle
+          w={48}
+          h={48}
+          style={{ flexShrink: 0 }}
+        >
           <Avatar color="blue" radius="xl" size={48}>
             SC
           </Avatar>
@@ -173,9 +179,9 @@ function SkeletonDemo() {
 
       <Skeleton visible={loading}>
         <Text size="sm">
-          Skeletons keep the layout stable while content loads, so the app
-          never “jumps”. Click reload to see the shimmer — content fades back
-          in exactly where it was.
+          Skeletons keep the layout stable while content loads, so the app never
+          “jumps”. Click reload to see the shimmer — content fades back in
+          exactly where it was.
         </Text>
       </Skeleton>
     </Card>
@@ -308,8 +314,8 @@ function ModalDemo() {
         overlayProps={{ backgroundOpacity: 0.55, blur: 3 }}
       >
         <Text size="sm" c="dimmed" mb="md">
-          This modal uses the same Transition engine from the playground above
-          — with a blurred overlay for extra polish.
+          This modal uses the same Transition engine from the playground above —
+          with a blurred overlay for extra polish.
         </Text>
         <Button fullWidth onClick={close}>
           Nice, close it
@@ -339,12 +345,18 @@ export function ShowcasePage() {
 
         <Grid gap="lg">
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <div className="fade-in-up" style={{ "--stagger": 1 } as CSSProperties}>
+            <div
+              className="fade-in-up"
+              style={{ "--stagger": 1 } as CSSProperties}
+            >
               <SkeletonDemo />
             </div>
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <div className="fade-in-up" style={{ "--stagger": 2 } as CSSProperties}>
+            <div
+              className="fade-in-up"
+              style={{ "--stagger": 2 } as CSSProperties}
+            >
               <LoadersDemo />
             </div>
           </Grid.Col>
