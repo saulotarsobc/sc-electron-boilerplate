@@ -66,7 +66,9 @@ export function SystemPage() {
     window.ipcRenderer.invoke<SystemInfo>("system:info").then(setInfo);
 
     const fetchMetrics = () =>
-      window.ipcRenderer.invoke<SystemMetrics>("system:metrics").then(setMetrics);
+      window.ipcRenderer
+        .invoke<SystemMetrics>("system:metrics")
+        .then(setMetrics);
 
     fetchMetrics();
     const interval = window.setInterval(fetchMetrics, 1000);
@@ -115,7 +117,12 @@ export function SystemPage() {
           label: "Node.js",
           value: info.nodeVersion,
         },
-        { icon: IconEngine, color: "orange", label: "V8", value: info.v8Version },
+        {
+          icon: IconEngine,
+          color: "orange",
+          label: "V8",
+          value: info.v8Version,
+        },
       ]
     : [];
 
@@ -167,14 +174,21 @@ export function SystemPage() {
                 withBorder
               >
                 <Group>
-                  <ThemeIcon variant="light" color={item.color} size="xl" radius="md">
+                  <ThemeIcon
+                    variant="light"
+                    color={item.color}
+                    size="xl"
+                    radius="md"
+                  >
                     <item.icon size={26} stroke={1.5} />
                   </ThemeIcon>
                   <div>
-                    <Text size="xs" c="dimmed" fw={700} tt="uppercase">
+                    <Text size="md" c="dimmed" fw={700} tt="uppercase">
                       {item.label}
                     </Text>
-                    <Text fw={700}>v{item.value}</Text>
+                    <Text fw={300} color="dimmed" fz="xs">
+                      {item.value}
+                    </Text>
                   </div>
                 </Group>
               </Card>
@@ -407,7 +421,9 @@ export function SystemPage() {
                     <Table.Tr>
                       <Table.Th>CPU</Table.Th>
                       <Table.Td>
-                        {info ? `${info.cpuModel} — ${info.cpuCores} cores` : "…"}
+                        {info
+                          ? `${info.cpuModel} — ${info.cpuCores} cores`
+                          : "…"}
                       </Table.Td>
                     </Table.Tr>
                     <Table.Tr>
