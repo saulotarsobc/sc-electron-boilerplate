@@ -22,9 +22,7 @@ export function useCountUp(target: number, duration = 1200): number {
     let frame: number;
 
     const tick = (now: number) => {
-      const progress = reduceMotion
-        ? 1
-        : Math.min((now - start) / duration, 1);
+      const progress = reduceMotion ? 1 : Math.min((now - start) / duration, 1);
       const current = from + (target - from) * easeOutCubic(progress);
       valueRef.current = current;
       setValue(current);
