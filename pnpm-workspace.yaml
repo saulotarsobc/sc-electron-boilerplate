@@ -1,5 +1,0 @@
-allowBuilds:
-  electron-winstaller: true
-  esbuild: true
-minimumReleaseAgeExclude:
-  - tsx@4.23.11

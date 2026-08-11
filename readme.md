@@ -86,7 +86,9 @@ $ npm run dev
     "release": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1",
     "release:dry": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/release.ps1 -DryRun",
     "release:notes": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/changelog.ps1",
-    "release:publish": "npm run dist:prepare && electron-builder --publish always"
+    "release:publish": "npm run dist:prepare && electron-builder --publish always",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"backend/**/*.{ts,tsx}\" \"scripts/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check ."
   }
 }
 ```
