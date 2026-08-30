@@ -22,11 +22,11 @@
 <div align="center">
  <img alt="static badge from mantine" src="https://img.shields.io/badge/Mantine-v9.5.2-339AF0?logo=mantine&logoColor=339AF0">
  <img alt="static badge from nodejs" src="https://img.shields.io/badge/NodeJS-v24.19.0-44883e?logo=nodedotjs&logoColor=44883e">
- <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v43.4.0-E73D2F?logo=electron&logoColor=E73D2F">
+ <img alt="static badge from electronjs" src="https://img.shields.io/badge/ElectronJS-v44.0.0-E73D2F?logo=electron&logoColor=E73D2F">
  <img alt="static badge from electron builder" src="https://img.shields.io/badge/Electron%20Builder-v26.15.3-undefined?logo=electronbuilder&logoColor=undefined">
  <img alt="static badge from typescript" src="https://img.shields.io/badge/TypeScript-v5.9.3-blue?logo=typescript&logoColor=blue">
  <img alt="static badge from reactjs" src="https://img.shields.io/badge/ReactJS-v19.2.8-61DAFB?logo=react&logoColor=61DAFB">
- <img alt="static badge from vite" src="https://img.shields.io/badge/Vite-v7.3.6-9135FF?logo=vite&logoColor=9135FF">
+ <img alt="static badge from vite" src="https://img.shields.io/badge/Vite-v8.2.2-9135FF?logo=vite&logoColor=9135FF">
 </div>
 <!-- Badge End -->
 
