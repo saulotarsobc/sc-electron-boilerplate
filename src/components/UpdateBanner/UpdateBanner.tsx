@@ -1,6 +1,6 @@
-import type { UpdateStatus } from "@/types/update";
 import { Button, Group, Progress, Text } from "@mantine/core";
 import { IconDownload, IconRefreshAlert } from "@tabler/icons-react";
+import type { UpdateStatus } from "../../types/update";
 
 interface UpdateBannerProps {
   status: UpdateStatus;

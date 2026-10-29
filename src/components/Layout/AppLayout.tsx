@@ -1,6 +1,3 @@
-import { ColorSchemeToggle } from "@/components/ColorSchemeToggle/ColorSchemeToggle";
-import { UpdateBanner } from "@/components/UpdateBanner/UpdateBanner";
-import { useUpdateStatus } from "@/hooks/useUpdateStatus";
 import {
   ActionIcon,
   AppShell,
@@ -29,6 +26,9 @@ import {
 } from "@tabler/icons-react";
 import { ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ColorSchemeToggle } from "../../components/ColorSchemeToggle/ColorSchemeToggle";
+import { useUpdateStatus } from "../../hooks/useUpdateStatus";
+import { UpdateBanner } from "../UpdateBanner/UpdateBanner";
 
 interface AppLayoutProps {
   children: ReactNode;

@@ -1,6 +1,6 @@
-import type { UpdateStatus } from "@/types/update";
 import type { IpcRendererEvent } from "electron";
 import { useEffect, useState } from "react";
+import type { UpdateStatus } from "../types/update";
 
 /**
  * Tracks the auto-update progress pushed by the main process over the

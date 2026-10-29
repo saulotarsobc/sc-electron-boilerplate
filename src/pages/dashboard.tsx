@@ -1,4 +1,3 @@
-import { useCountUp } from "@/hooks/useCountUp";
 import {
   Badge,
   Button,
@@ -32,6 +31,7 @@ import {
   IconUsers,
 } from "@tabler/icons-react";
 import { CSSProperties, useState } from "react";
+import { useCountUp } from "../hooks/useCountUp";
 import classes from "./dashboard.module.css";
 
 const numberFormat = new Intl.NumberFormat("en-US");

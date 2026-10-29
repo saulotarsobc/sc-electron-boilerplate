@@ -1,5 +1,3 @@
-import { useCountUp } from "@/hooks/useCountUp";
-import type { SystemInfo, SystemMetrics } from "@/types/ipc";
 import {
   Alert,
   Badge,
@@ -30,6 +28,8 @@ import {
   IconHourglass,
 } from "@tabler/icons-react";
 import { CSSProperties, useEffect, useState } from "react";
+import { useCountUp } from "./../hooks/useCountUp";
+import type { SystemInfo, SystemMetrics } from "./../types/ipc";
 
 const formatBytes = (bytes: number) => {
   const gb = bytes / 1024 ** 3;

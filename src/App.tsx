@@ -1,6 +1,6 @@
-import { AppLayout } from "@/components/Layout";
 import { MantineProvider } from "@mantine/core";
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import { AppLayout } from "./components/Layout";
 import { DashboardPage } from "./pages/dashboard";
 import { GalleryPage } from "./pages/gallery";
 import { HomePage } from "./pages/home";
