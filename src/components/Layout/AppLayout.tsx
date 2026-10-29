@@ -77,6 +77,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         <Group h="100%" px="md" justify="space-between">
           <Group>
             <Burger
+              aria-label="Toggle navigation"
               opened={opened}
               onClick={toggle}
               hiddenFrom="sm"
@@ -88,6 +89,7 @@ export function AppLayout({ children }: AppLayoutProps) {
           <Group>
             <ColorSchemeToggle />
             <ActionIcon
+              aria-label="Saulo Costa on GitHub"
               variant="light"
               size="lg"
               component="a"

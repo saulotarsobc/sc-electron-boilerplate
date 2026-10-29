@@ -72,6 +72,7 @@ export function SearchPage() {
 
       <Group mb="xl">
         <TextInput
+          aria-label="Search"
           placeholder="Search for anything..."
           value={searchQuery}
           onChange={(event) => setSearchQuery(event.currentTarget.value)}
@@ -79,10 +80,10 @@ export function SearchPage() {
           style={{ flex: 1 }}
           size="md"
         />
-        <ActionIcon size="lg" variant="light">
+        <ActionIcon aria-label="Filter results" size="lg" variant="light">
           <IconFilter size={20} />
         </ActionIcon>
-        <ActionIcon size="lg" variant="light">
+        <ActionIcon aria-label="Sort results" size="lg" variant="light">
           <IconSortDescending size={20} />
         </ActionIcon>
       </Group>

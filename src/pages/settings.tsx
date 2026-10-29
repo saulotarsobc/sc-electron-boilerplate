@@ -9,6 +9,8 @@ import {
   Switch,
   Text,
   Title,
+  useComputedColorScheme,
+  useMantineColorScheme,
 } from "@mantine/core";
 import {
   IconBell,
@@ -19,6 +21,9 @@ import {
 } from "@tabler/icons-react";
 
 export function SettingsPage() {
+  const { setColorScheme } = useMantineColorScheme();
+  const colorScheme = useComputedColorScheme("dark");
+
   return (
     <Container size="md" py="xl">
       <Group mb="xl">
@@ -45,7 +50,13 @@ export function SettingsPage() {
                   Use dark theme
                 </Text>
               </div>
-              <Switch />
+              <Switch
+                aria-label="Dark mode"
+                checked={colorScheme === "dark"}
+                onChange={(event) =>
+                  setColorScheme(event.currentTarget.checked ? "dark" : "light")
+                }
+              />
             </Group>
             <Group justify="space-between">
               <div>
@@ -55,6 +66,7 @@ export function SettingsPage() {
                 </Text>
               </div>
               <Select
+                aria-label="Color scheme"
                 data={["Blue", "Green", "Red", "Orange", "Purple"]}
                 defaultValue="Blue"
                 w={120}
@@ -77,7 +89,7 @@ export function SettingsPage() {
                   Receive push notifications
                 </Text>
               </div>
-              <Switch defaultChecked />
+              <Switch aria-label="Push notifications" defaultChecked />
             </Group>
             <Group justify="space-between">
               <div>
@@ -86,7 +98,7 @@ export function SettingsPage() {
                   Receive email updates
                 </Text>
               </div>
-              <Switch />
+              <Switch aria-label="Email notifications" />
             </Group>
             <Group justify="space-between">
               <div>
@@ -95,7 +107,7 @@ export function SettingsPage() {
                   Play sound for notifications
                 </Text>
               </div>
-              <Switch defaultChecked />
+              <Switch aria-label="Sound notifications" defaultChecked />
             </Group>
           </Stack>
         </Card>
@@ -125,7 +137,7 @@ export function SettingsPage() {
                   Show when you're online
                 </Text>
               </div>
-              <Switch defaultChecked />
+              <Switch aria-label="Activity status" defaultChecked />
             </Group>
           </Stack>
         </Card>
@@ -144,7 +156,7 @@ export function SettingsPage() {
                   Automatically download images and files
                 </Text>
               </div>
-              <Switch />
+              <Switch aria-label="Auto-download media" />
             </Group>
             <Group justify="space-between">
               <div>

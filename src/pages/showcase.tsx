@@ -75,6 +75,7 @@ function TransitionPlayground() {
             Duration: {duration}ms
           </Text>
           <Slider
+            aria-label="Transition duration"
             flex={1}
             min={100}
             max={1000}

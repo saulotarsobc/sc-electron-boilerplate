@@ -117,13 +117,25 @@ export function MessagesPage() {
                     {message.unread}
                   </Badge>
                 )}
-                <ActionIcon variant="light" color="blue">
+                <ActionIcon
+                  aria-label={`Call ${message.name}`}
+                  variant="light"
+                  color="blue"
+                >
                   <IconPhone size={16} />
                 </ActionIcon>
-                <ActionIcon variant="light" color="green">
+                <ActionIcon
+                  aria-label={`Video call ${message.name}`}
+                  variant="light"
+                  color="green"
+                >
                   <IconVideo size={16} />
                 </ActionIcon>
-                <ActionIcon variant="light" color="gray">
+                <ActionIcon
+                  aria-label={`Message ${message.name}`}
+                  variant="light"
+                  color="gray"
+                >
                   <IconSend size={16} />
                 </ActionIcon>
               </Group>
