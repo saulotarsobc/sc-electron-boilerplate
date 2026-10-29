@@ -47,7 +47,7 @@ export default defineConfig({
         },
       },
       preload: {
-        input: path.join(__dirname, "backend/preload.ts"),
+        input: path.join(import.meta.dirname, "backend/preload.ts"),
         vite: {
           build: {
             outDir: "dist/backend",
@@ -59,7 +59,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
 });
