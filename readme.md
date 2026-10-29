@@ -54,6 +54,12 @@ Under the hood: typed IPC bridge (`contextBridge` + shared types between main an
 
 - [Mantine](https://mantine.dev/)
 
+## Community
+
+- [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Security Policy](SECURITY.md)
+
 ## Getting Started
 
 ```bash
