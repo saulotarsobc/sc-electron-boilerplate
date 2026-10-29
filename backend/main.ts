@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, shell } from "electron";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { displayName } from "../package.json";
@@ -47,6 +47,20 @@ function createWindow() {
       contextIsolation: true,
       nodeIntegration: false,
     },
+  });
+
+  mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+    const { protocol } = new URL(url);
+
+    if (protocol === "https:" || protocol === "http:") {
+      void shell.openExternal(url).catch((error: unknown) => {
+        console.error("Failed to open external link:", error);
+      });
+    }
+
+    return {
+      action: "deny",
+    };
   });
 
   if (VITE_DEV_SERVER_URL) {
